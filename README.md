@@ -75,3 +75,16 @@
 第六步：点击软件的手动或自动开始（优点：出牌的时候可以在手动和自动之间切换）。
 
 最后感谢大家的理解和支持，一个人的力量有限，希望大家多多反馈BUG，确认后我会尽快处理。
+
+环境安装
+Python 3.11.3
+下载 vscode我们用vscode运行 https://code.visualstudio.com/Download
+pip3 install -r requirements.txt
+
+ModuleNotFoundError: No module named 'win32gui'
+pip install pypiwin32
+安装c++桌面开发环境
+error: Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools": https://visualstudio.microsoft.com/visual-cpp-build-tools/
+
+No module named 'onnxruntime'
+pip install onnxruntime  -i https://pypi.douban.com/simple/

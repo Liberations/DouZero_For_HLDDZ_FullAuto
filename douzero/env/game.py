@@ -163,14 +163,28 @@ class GameEnv(object):
                 if len(action_list) >= 2:
                     # 地主胜率低于-0.2 不允许炸
                     if (((action in bombs) or (30 in action and 20 in action)) and position == "landlord"
-                            and actions_confidence < -0.6 / 8):
+                            and round(float(action_list[0][1]) * 8, 4) < -0.6):
                         action_list.sort(key=self.compare_action, reverse=True)
                         action, actions_confidence = action_list[1][0], action_list[1][1]
                         win_rate = actions_confidence
 
                     # 农民胜率低于 -0.2 不允许炸
                     if (((action in bombs) or (30 in action and 20 in action))
-                            and position in ["landlord_up", "landlord_down"] and actions_confidence < -0.6 / 8):
+                            and position in ["landlord_up", "landlord_down"]
+                            and round(float(action_list[0][1]) * 8, 4) < -0.6):
+                        action_list.sort(key=self.compare_action, reverse=True)
+                        action, actions_confidence = action_list[1][0], action_list[1][1]
+                        win_rate = actions_confidence
+
+                    # 当第一选择是pass，第二选择是炸弹，炸弹胜率大于0.6就可以炸了
+                    if (action == [] and position == "landlord" and round(float(action_list[0][1]) * 8, 4) > 0.6
+                            and action_list[1][0] in bombs):
+                        action_list.sort(key=self.compare_action, reverse=True)
+                        action, actions_confidence = action_list[1][0], action_list[1][1]
+                        win_rate = actions_confidence
+
+                    # 当胜率大于0.5  要是pass的话就选择第二手牌
+                    if action == [] and round(float(action_list[0][1]) * 8, 4) > 0.5:
                         action_list.sort(key=self.compare_action, reverse=True)
                         action, actions_confidence = action_list[1][0], action_list[1][1]
                         win_rate = actions_confidence

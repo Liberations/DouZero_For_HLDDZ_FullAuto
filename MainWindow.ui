@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>631</width>
-    <height>594</height>
+    <width>652</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="font">
@@ -28,7 +28,7 @@
   <widget class="QTableWidget" name="tableWidget">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>20</x>
      <y>10</y>
      <width>611</width>
      <height>75</height>
@@ -491,7 +491,7 @@ background:none;
   <widget class="QScrollArea" name="scrollArea">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>20</x>
      <y>270</y>
      <width>371</width>
      <height>241</height>
@@ -676,7 +676,7 @@ background:none;
   <widget class="QScrollArea" name="scrollArea_2">
    <property name="geometry">
     <rect>
-     <x>390</x>
+     <x>400</x>
      <y>270</y>
      <width>231</width>
      <height>91</height>
@@ -743,7 +743,7 @@ background:none;
   <widget class="QScrollArea" name="scrollArea_3">
    <property name="geometry">
     <rect>
-     <x>390</x>
+     <x>400</x>
      <y>370</y>
      <width>231</width>
      <height>141</height>
@@ -761,14 +761,74 @@ background:none;
       <height>139</height>
      </rect>
     </property>
-    <widget class="QTextEdit" name="textEdit">
+    <widget class="QLabel" name="code_label">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>211</width>
-       <height>111</height>
+       <width>141</width>
+       <height>121</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/pics/code.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>20</y>
+       <width>72</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>华文琥珀</family>
+       <pointsize>9</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>开 扫
+源 码
+不 求
+易 赞
+</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>110</y>
+       <width>72</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>华文新魏</family>
+       <pointsize>9</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>马  云</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>
@@ -776,7 +836,7 @@ background:none;
   <widget class="QScrollArea" name="scrollArea_4">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>20</x>
      <y>520</y>
      <width>611</width>
      <height>61</height>
@@ -879,7 +939,7 @@ background:none;
   <widget class="QScrollArea" name="scrollArea_5">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>20</x>
      <y>100</y>
      <width>611</width>
      <height>161</height>
