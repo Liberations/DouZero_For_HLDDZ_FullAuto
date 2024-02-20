@@ -76,15 +76,21 @@
 
 最后感谢大家的理解和支持，一个人的力量有限，希望大家多多反馈BUG，确认后我会尽快处理。
 
-环境安装
-Python 3.11.3
-下载 vscode我们用vscode运行 https://code.visualstudio.com/Download
+## 环境安装
+我用的 Python 3.11.3 自行百度
 pip3 install -r requirements.txt
 
 ModuleNotFoundError: No module named 'win32gui'
 pip install pypiwin32
+
 安装c++桌面开发环境
 error: Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools": https://visualstudio.microsoft.com/visual-cpp-build-tools/
+这个报错安装
+https://visualstudio.microsoft.com/visual-cpp-build-tools/
+勾选桌面开发就行主要是缺c++环境
 
 No module named 'onnxruntime'
 pip install onnxruntime  -i https://pypi.douban.com/simple/
+
+## 运行
+python mian.py
